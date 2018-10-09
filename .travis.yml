@@ -4,7 +4,7 @@ node_js:
 services:
   - postgresql # starts up postgres
 addons:
-  postgresql: '9.6' # highest available postgres version on Travis
+  postgresql: "9.6" # highest available postgres version on Travis
 dist: trusty # uses trusty environment
 sudo: false # when on trusty, uses Docker containers for speed
 notifications:
@@ -19,9 +19,9 @@ before_script:
 # before_deploy:
 #   - npm run build-client # make the bundle
 #   - rm -rf node_modules # omit from the tarball, since we skip cleanup
-# deploy:
-#   skip_cleanup: true # prevents travis from deleting the build
-#   provider: heroku
-#   app: YOUR-HEROKU-APP-NAME-HERE # see README
-#   api_key:
-#     secure: YOUR-***ENCRYPTED***-API-KEY-HERE
+deploy:
+  skip_cleanup: true # prevents travis from deleting the build
+  provider: heroku
+  app: samuraisan # see README
+  api_key:
+    secure: ff4CuJqDXAkuEnQMbX8JrKJcjsRLGazwVF7GVfQ7+Q0c3R8uZbkNS213A95qz8IJ49y0KjxjkDR/EcNonIaX35gZmkK2wLGTMWJFgmnJ1RpgXq6Di47gWtAE9bhzvS/WpXs3GsiduSlXS4RijK5AwLnnA6Akzj8ILzP4oXLM2Rypv3CAfDafPWuG8HS+pLPz1pIWBVjlSDtLBrF5l9+9j7Nqf0nv3VFtj9kE2dlg4uvOA0Db9nvQqAbpANHji08kKfyhMBVuun0J3L2B2jdvyQVxPDGnPN7JdcZjYBSbp5aJHLGZQ/svSHz929ICzf5MOd16BjX+jKPn6vfSI+IvOLQSXzXqVTtsT2Kos/AhK5il50tW9rpYphlxVSfxqMutObNcUHLf/nOpa0c4oBEiWjjsqStciz8N3oHb7SoVJcKjiLKFF8p4SBqWsxsJ5dMTCnybuAEc3NWy2g9OjGnDWLu1DOCvKMkaezuIyn/oInVCApS9XrbO+fK4eg/uwdWtGDga7C/2ltwZHRRJ+hpg60S+42VNMt6bq++0t8xeBtIwlau+MPKl2Sy10BE7PejTAyuJLdFCni+3D4fMJ+JxSPDr89ZjNdDKXhKrXK1ZJ0p/PcU+X5bUoycflFMIORrnupK1GExTbOHynB4LXQYSqs/lrsVWVKrwNd97JLtijyo=
